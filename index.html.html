@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Nathalia 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe0f0, #fff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    .mensagem {
+      font-size: 24px;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    #botaoContinuar {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    .fotos-declaracao {
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .fotos-declaracao img {
+      width: 300px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+
+    .fotos-declaracao img:hover {
+      transform: scale(1.05);
+    }
+
+    .mensagem-final {
+      font-size: 22px;
+      max-width: 600px;
+      margin: 30px auto 0;
+      color: #444;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/1ij2dahvy4m38pcw8m5y4/A-Hora-e-Agora.mp3?rlkey=wbbdlzvwz9ktwb7egga3a9toa&raw=1" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="container">
+    <div class="mensagem" style="animation-delay: 0s;">Oi, meu bem ❤️</div>
+    <div class="mensagem" style="animation-delay: 1.5s;">Eu queria te mostrar de um jeito diferente...</div>
+    <div class="mensagem" style="animation-delay: 3s;">O quanto você é especial pra mim.</div>
+    <div class="mensagem" style="animation-delay: 4.5s;">Cada momento ao seu lado tem sido único, mágico e verdadeiro.</div>
+    <div class="mensagem" style="animation-delay: 6s;">E mesmo que as palavras às vezes falhem...</div>
+    <div class="mensagem" style="animation-delay: 7.5s;">Meu coração sempre encontra um jeito de dizer:</div>
+    <div class="mensagem" style="animation-delay: 9s;">Eu te amo, Nathalia. 💗</div>
+
+    <button id="botaoContinuar">Clique aqui, meu bem</button>
+
+    <div class="fotos-declaracao" id="fotosContainer">
+        <img src="https://drive.google.com/uc?export=view&id=1D8HB0X-XCj9ItCp6ysyQ8L-CN06Grnw3" alt="Nós dois">
+      <div class="mensagem-final">
+        Desde que você chegou, tudo ficou mais bonito.  
+        Seu sorriso ilumina meus dias, seu carinho me acalma, e seu amor me completa.  
+        Você é minha melhor escolha, minha paz, meu amor.  
+        <strong>Te amo, meu bem 💘</strong>
+      </div>
+      <img src="https://drive.google.com/uc?export=view&id=1hfS0rXCZHLDMN741YPPzbuU86s6Klt06" alt="Momentos juntos">
+  </div>
+
+  <script>
+    const mensagens = document.querySelectorAll(".mensagem");
+    mensagens.forEach((msg, i) => {
+      setTimeout(() => msg.style.opacity = "1", i * 1500);
+    });
+
+    document.getElementById("botaoContinuar").addEventListener("click", () => {
+      document.getElementById("fotosContainer").style.display = "flex";
+      document.getElementById("botaoContinuar").style.display = "none";
+    });
+  </script>
+</body>
+</html>
